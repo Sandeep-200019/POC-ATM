@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Account {
 	
 	private int customerNumber;
-	private String pinNumber;
+	private int pinNumber;
 	private double checkingsBalance;
 	private double savingsBalance;
 	
@@ -21,10 +21,10 @@ public class Account {
 	}
 	
 	
-	public String getPinNumber() {
+	public int getPinNumber() {
 		return pinNumber;
 	}
-	public void setPinNumber(String pinNumber) {
+	public void setPinNumber(int pinNumber) {
 		this.pinNumber = pinNumber;
 	}
 	
@@ -185,9 +185,8 @@ public class Account {
 	}
 	
 	
-	public void inputForTransfer() {
-		System.out.println("Enter the account type");
-		String acctype = input.nextLine();
+	public void inputForTransfer(String acctype) {
+		
 		boolean end = false;
 		
 	while(!end)	{
