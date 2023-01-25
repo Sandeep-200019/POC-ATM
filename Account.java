@@ -11,6 +11,20 @@ public class Account {
 	Scanner input = new Scanner(System.in);
 	
 	
+	public Account(int customerNumber, int pinNumber){
+		this.customerNumber = customerNumber;
+		this.pinNumber = pinNumber;
+		
+	}
+	
+	
+	public Account(int customerNumber, int pinNumber, double checkingsBalance, double savingsBalance) {
+		this.customerNumber = customerNumber;
+		this.pinNumber = pinNumber;
+		this.checkingsBalance = checkingsBalance;
+		this.savingsBalance = savingsBalance;
+	}
+	
 	
 	public int getCustomerNumber() {
 		return customerNumber;
@@ -226,8 +240,8 @@ public class Account {
 		
 				else if(acctype.equals("Savings")) {
 					System.out.println("Select from the following options: ");
-					System.out.println("Transfer amount to checkings");
-					System.out.println("Exit");
+					System.out.println("1. Transfer amount to checkings");
+					System.out.println("2. Exit");
 					int choice = input.nextInt();
 			
 					switch(choice) {
